@@ -11,8 +11,8 @@ struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBat
   struct CountsBySoH counts = {0, 0, 0};
   for(int i=0;i< nBatteries;i++)
     {
-      int capacity = 120;
-      float soh = (float)presentCapacities[i] / capacity * 100;
+      int rated_capacity = 120;
+      float soh = (float)presentCapacities[i] / rated_capacity * 100;
        if (soh > 80) 
        {
          counts.healthy++;
